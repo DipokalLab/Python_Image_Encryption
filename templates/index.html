@@ -50,7 +50,7 @@
               <h3 class="section-title title-break">이미지를 업로드 하세요 🚀</h3>
               <div class="panel-body" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <form id="target" class="form-horizontal">
-                    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                    <input type="file" class="form-control" id="file_image" aria-describedby="inputGroupFileAddon04" aria-label="Upload"  accept=".jpg, .png">
 
                 </form>
               </div>
@@ -81,9 +81,49 @@
       </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
     <script>
+
+      async function select_file() {
+        const files = document.querySelector('#file_image').files
+        const formData = new FormData()
+        formData.append('file', files[0])
+
+        return formData
+      }
+
+      async function upload_file(formData) {
+        let response = await fetch("/upload", {
+          method: "POST",
+          body: formData
+        })
+
+        let data = await response.json()
+        return data
+      }
+
+      async function upload() {
+        let formData = await select_file()
+        let data = await upload_file(formData)
+
+        if (data.status == 1) {
+          swal.fire({
+            icon: 'success',
+            title: '업로드 성공',
+            showConfirmButton: false,
+            timer: 1000
+          })
+        } else {
+          swal.fire({
+            icon: 'error',
+            title: '업로드 실패',
+            showConfirmButton: false,
+            timer: 1000
+          })
+        }
+      }
 
     </script>
 </body>
