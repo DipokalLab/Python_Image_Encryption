@@ -1,0 +1,149 @@
+html, body{
+    height: 100%;
+}
+header {
+
+padding: 156px 0 150px;
+background-color: #edeef3;
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+
+
+}
+
+
+section {
+    padding: 150px 0;
+}
+
+.hr-light{
+    background-color: white;
+}
+
+.nav-title{
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.service-font{
+    font-family: 'Josefin Sans', sans-serif;
+    opacity: 40%;
+
+}
+
+.section-01{
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.section-02{
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.btn-tp{
+    border: transparent;
+}
+.btn-tp:focus{
+    outline: transparent !important;
+
+}
+.site-title{
+font-family: 'Noto Sans KR', sans-serif;
+line-height: 28px;
+font-size: 24px;
+
+}
+
+
+@media (min-width: 767.98px) { 
+    
+    .site-title{
+        font-family: 'Noto Sans KR', sans-serif;
+        line-height: 48px;
+        font-size: 38px;
+        
+    }
+}
+
+@media (min-width: 1200px) { 
+    .site-title{
+        font-family: 'Noto Sans KR', sans-serif;
+        line-height: 64px;
+        font-size: 44px;
+        
+    }
+
+ }
+
+.test-header{
+    height: 100% !important;
+}
+
+.test-title {
+    padding-top: 106px;
+
+}
+
+
+.site-header{
+background-color: rgba(255, 255, 255, 0.822);
+-webkit-backdrop-filter: saturate(180%) blur(20px);
+backdrop-filter: saturate(180%) blur(20px);
+}
+
+.section-title {
+font-family: 'Noto Sans KR', sans-serif;
+color: #000000;
+line-height: 55px;
+}
+
+.title-break {
+    word-break: keep-all;
+
+
+}
+
+.img-test{
+    height: 300px;
+}
+
+.icon-dark {
+    color: #131313;
+}
+
+.bg-black{
+background-color: #131313;
+}
+
+.bg-greack{
+    background-color: #0e0f11;
+}
+
+#footer{
+    padding-top: 46px;
+
+    padding: 26px;
+}
+
+.btn-round{
+    border-radius: 24px;
+}
+
+.tab{
+    width: 90vw;
+    background-color: teal;
+    border-radius: 26px;
+    margin: 12px;
+
+}
+
+.navbar-toggler{
+    border: transparent;
+}
+
+.navbar-toggler:focus{
+    outline: transparent !important;
+
+}

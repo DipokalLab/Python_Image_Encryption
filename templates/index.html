@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>이미지 암호화</title>
+
+    <!-- CSS Dependencies -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/shards-ui@latest/dist/css/shards.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars icon-dark"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand text-dark" href="#">Image ENC</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-dark active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="https://team.devent.kr">Team</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+      <header class="text-white front">
+        <div class="container text-center">
+          <h2 class="text-dark site-title align-middle title-break">이미지 암호화 🔒</h2>
+          <b class="text-dark title-break">이미지를 간단하게 숨겨드립니다.</b>
+        </div>
+      </header>
+  
+      <section id="research" class="bg-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 mx-auto sec-01">
+              <h3 class="section-title title-break">이미지를 업로드 하세요 🚀</h3>
+              <div class="panel-body" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <form id="target" class="form-horizontal">
+                    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+
+                </form>
+              </div>
+              
+            </div>
+  
+          </div>
+        </div>
+      </section>
+
+      <div class="bg-secondary" id="footer">
+        <div class="container-fluid">    
+          <div class="row h-100 justify-content-center mt-3">
+            <div class="col-lg-6 text-start">
+              <h3 class="text-3 text-light">데벤트(DeVent)</h3> 
+              <b class="text-light">허형준</b> <br>
+              <p class="text-5 text-light">문의: hhj@devent.kr</p>
+  
+            </div>
+            <div class="col-lg-6 text-end">
+              <b class="text-light">연관 페이지</b> <br>
+              <p class="text-5 text-light mt-2"><a href="https://www.notion.so/Voice-of-Light-5408aec254f745b9a97def4521f4964a" target="_blank" rel="noopener noreferrer">프로젝트 소개</a> </p>
+
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <script>
+
+    </script>
+</body>
+</html>
